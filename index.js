@@ -42,13 +42,6 @@ $(document).ready(function () {
 
     // Oculta el overlay
     $("#overlay").fadeOut();
-
-    // Agrega la clase a la barra de navegación cuando el overlay está activo
-    $(".navbar").toggleClass(
-      "navbar-overlay-active",
-      $("#overlay").css("display") === "block"
-    );
-
     // Obtiene el destino del enlace
     var target = $(this).attr("href");
 
@@ -57,13 +50,20 @@ $(document).ready(function () {
       {
         scrollTop: $(target).offset().top,
       },
-      500,
+      1000,
       function () {
-        // Elimina la clase de la barra de navegación cuando se hace clic en un enlace del menú
-        $(".navbar").removeClass("navbar-overlay-active");
-
-        // Recarga la barra de navegación
-        location.reload();
+        // Restaura los estilos de la barra de navegación
+        overlay.style.display = "none";
+        toggleButton.classList.remove("newPosition");
+        logo.classList.remove("logo-color-change");
+        navBar.classList.remove("navbar-color-change");
+        navBar.classList.remove("nav-hover-change");
+        hamburguerButton.classList.remove("hamburger-button-color-change");
+        languageButtons.forEach((button) =>
+          button.classList.remove("language-button-color-change")
+        );
+        document.getElementById("logo1").style.animation = "none";
+        document.getElementById("logo2").style.animation = "none";
       }
     );
   });
@@ -251,6 +251,8 @@ const overlay = document.getElementById("overlay");
 const hamburguerButton = document.querySelector(".hamburger-button");
 const languageButtons = document.querySelectorAll(".language-button");
 const logo = document.getElementById("logo-container");
+const languageButtonsContainer = document.querySelector (".language-button-container");
+const languageSpanButton = document.querySelector(".language-button-span")
 
 toggleButton.addEventListener("click", function () {
   overlay.style.display = overlay.style.display === "block" ? "none" : "block";
@@ -259,6 +261,8 @@ toggleButton.addEventListener("click", function () {
   navBar.classList.toggle("navbar-color-change");
   navBar.classList.toggle("nav-hover-change");
   hamburguerButton.classList.toggle("hamburger-button-color-change");
+  languageButtonsContainer.classList.toggle ("language-button-container-change");
+  languageSpanButton.classList.toggle ("language-button-span-color-change")
   languageButtons.forEach((button) =>
     button.classList.toggle("language-button-color-change")
   );
@@ -282,6 +286,8 @@ document.getElementById("overlay").addEventListener("click", function () {
   if (!event.target.closest("#nav-content"))
     window.location.href = "index.html"; //
 });
+
+//restore styles
 
 // carousel-about-container
 
