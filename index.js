@@ -59,11 +59,17 @@ $(document).ready(function () {
         navBar.classList.remove("navbar-color-change");
         navBar.classList.remove("nav-hover-change");
         hamburguerButton.classList.remove("hamburger-button-color-change");
+        languageButtonsContainer.classList.remove(
+          "language-button-container-change"
+        );
+        languageSpanButton.classList.remove(
+          "language-button-span-color-change"
+        );
         languageButtons.forEach((button) =>
           button.classList.remove("language-button-color-change")
         );
-        document.getElementById("logo1").style.animation = "none";
-        document.getElementById("logo2").style.animation = "none";
+        document.getElementById("logo1").style.animation = "slide1 1s ease-in-out forwards";
+        document.getElementById("logo2").style.animation = "slide3 1s ease-in-out forwards";
       }
     );
   });
@@ -190,6 +196,20 @@ window.addEventListener("scroll", function () {
 
 document.addEventListener("mousemove", function (event) {
   var customMouse = document.getElementById("custom-mouse");
+
+  // Verificar si el overlay está abierto
+  var overlay = document.getElementById("overlay");
+  if (overlay.style.display === "block") {
+    // Reducir el tamaño del cursor cuando el overlay está abierto
+    customMouse.style.width = "15px";
+    customMouse.style.height = "15px";
+  } else {
+    // Restablecer el tamaño del cursor cuando el overlay está cerrado
+    customMouse.style.width = "25px";
+    customMouse.style.height = "25px";
+  }
+
+  // Actualizar la posición del cursor
   customMouse.style.left = event.clientX - 10 + "px";
   customMouse.style.top = event.clientY - 10 + "px";
 });
@@ -210,7 +230,16 @@ document.addEventListener("mouseover", function (event) {
   var target = event.target;
   if (target.classList.contains("clickable")) {
     var customMouse = document.getElementById("custom-mouse");
-    customMouse.style.transform = "scale(1.5)"; // aumenta el tamaño del cursor personalizado
+
+    // Verificar si el overlay está abierto
+    var overlay = document.getElementById("overlay");
+    if (overlay.style.display === "block") {
+      // Cambiar la escala del cursor cuando el overlay está abierto
+      customMouse.style.transform = "scale(2.5)";
+    } else {
+      // Restablecer la escala del cursor cuando el overlay está cerrado
+      customMouse.style.transform = "scale(1.5)";
+    }
   }
 });
 
@@ -251,8 +280,10 @@ const overlay = document.getElementById("overlay");
 const hamburguerButton = document.querySelector(".hamburger-button");
 const languageButtons = document.querySelectorAll(".language-button");
 const logo = document.getElementById("logo-container");
-const languageButtonsContainer = document.querySelector (".language-button-container");
-const languageSpanButton = document.querySelector(".language-button-span")
+const languageButtonsContainer = document.querySelector(
+  ".language-button-container"
+);
+const languageSpanButton = document.querySelector(".language-button-span");
 
 toggleButton.addEventListener("click", function () {
   overlay.style.display = overlay.style.display === "block" ? "none" : "block";
@@ -261,8 +292,8 @@ toggleButton.addEventListener("click", function () {
   navBar.classList.toggle("navbar-color-change");
   navBar.classList.toggle("nav-hover-change");
   hamburguerButton.classList.toggle("hamburger-button-color-change");
-  languageButtonsContainer.classList.toggle ("language-button-container-change");
-  languageSpanButton.classList.toggle ("language-button-span-color-change")
+  languageButtonsContainer.classList.toggle("language-button-container-change");
+  languageSpanButton.classList.toggle("language-button-span-color-change");
   languageButtons.forEach((button) =>
     button.classList.toggle("language-button-color-change")
   );
@@ -277,8 +308,8 @@ toggleButton.addEventListener("click", function () {
     document.getElementById("logo2").style.animation =
       "slide2 1s ease-in-out forwards";
   } else {
-    document.getElementById("logo1").style.animation = "none";
-    document.getElementById("logo2").style.animation = "none";
+    document.getElementById("logo1").style.animation = "slide1 1s ease-in-out forwards";
+    document.getElementById("logo2").style.animation = "slide3 1s ease-in-out forwards";
   }
 });
 

@@ -156,26 +156,13 @@ nav:hover {
   /* animation: slide1 1s ease-in-out forwards; */
 }
 
-@media screen and (max-width: 768px) {
-  #logo1 {
-    width: 40px;
-    height: 33px;
-  }
-}
-
 #logo2 {
   width: 70px;
   height: 50px;
   /* animation: slide2 1s ease-in-out forwards; */
 }
 
-@media screen and (max-width: 768px) {
-  #logo2 {
-    width: 40px;
-    height: 33px;
-    margin-left: 0;
-  }
-}
+
 
 @keyframes slide1 {
   0% {
@@ -195,6 +182,16 @@ nav:hover {
   }
 }
 
+@keyframes slide3 {
+  0% {
+    transform: translateX(25px);
+  }
+  100% {
+    transform: translateX(0px); /* Ajusta la separación del segundo logo */
+  }
+
+}
+
 .logo-color-change {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg)
     brightness(100%) contrast(100%);
@@ -207,11 +204,6 @@ nav:hover {
   padding: 15px;
 }
 
-@media screen and (max-width: 768px) {
-  .nav-buttons {
-    display: none;
-  }
-}
 .hamburger-button {
   background-color: transparent;
   color: #1d1d1b;
@@ -219,11 +211,6 @@ nav:hover {
   font-family: "plaak-bold";
 }
 
-@media screen and (max-width: 768px) {
-  .hamburger-button {
-    display: block;
-  }
-}
 
 .hamburger-button-color-change {
   color: #f4f3f3;
@@ -441,30 +428,25 @@ nav:hover {
   font-weight: 205;
 }
 
-/* gradient-section */
+/* space-section */
 
-.gradient-section {
-  height: 320px;
-  background: linear-gradient(to bottom, #ffffff, #a42f33);
-}
-
-.gradient-section-two {
-  height: 320px;
-  background: linear-gradient(to bottom, #a42f33, #f4f3f3);
+.space-section {
+  height: 40vh;
+  background-color: #f4f3f3;
 }
 /* second-section */
 
 .second-section {
-  height: 110vh;
+  height: 140vh;
   width: auto;
   background-color: #a42f33;
   /* border-bottom: 1px solid white; */
+  position: relative;
 }
 
-/* carousel-about-container */
 .carousel-container {
   background-color: #000;
-  height: 100vh;
+  height: 140vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -498,6 +480,7 @@ nav:hover {
   text-align: center;
   line-height: 50px;
   cursor: none;
+  opacity: 1;
 }
 
 .carousel .prev {
@@ -522,15 +505,15 @@ nav:hover {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #f4f3f3;
+  background-color: #1d1d1b;
   mix-blend-mode: exclusion;
   margin: 0 5px;
   cursor: none;
-  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
 }
 
 .carousel .indicator.active {
-  background-color: black;
+  background-color: #f4f3f3;
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
 }
 
 /* talents */
@@ -539,12 +522,13 @@ nav:hover {
   background-color: #f4f3f3;
 }
 .talent {
-  font-size: 100px;
+  font-size: 150px;
   font-weight: 400;
   margin-top: -20px;
   /* bottom: 0; */
   text-align: center;
   padding: 10px;
+  margin-bottom: 40px;
 }
 
 .card {
