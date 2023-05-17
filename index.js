@@ -68,8 +68,10 @@ $(document).ready(function () {
         languageButtons.forEach((button) =>
           button.classList.remove("language-button-color-change")
         );
-        document.getElementById("logo1").style.animation = "slide1 1s ease-in-out forwards";
-        document.getElementById("logo2").style.animation = "slide3 1s ease-in-out forwards";
+        document.getElementById("logo1").style.animation =
+          "slide1 1s ease-in-out forwards";
+        document.getElementById("logo2").style.animation =
+          "slide3 1s ease-in-out forwards";
       }
     );
   });
@@ -308,8 +310,10 @@ toggleButton.addEventListener("click", function () {
     document.getElementById("logo2").style.animation =
       "slide2 1s ease-in-out forwards";
   } else {
-    document.getElementById("logo1").style.animation = "slide1 1s ease-in-out forwards";
-    document.getElementById("logo2").style.animation = "slide3 1s ease-in-out forwards";
+    document.getElementById("logo1").style.animation =
+      "slide1 1s ease-in-out forwards";
+    document.getElementById("logo2").style.animation =
+      "slide3 1s ease-in-out forwards";
   }
 });
 
@@ -521,7 +525,7 @@ teamCards.forEach(function (card) {
   const contenidoOculto = card.querySelector(".contenido-oculto");
   const flecha = card.querySelector(".arrow1");
   const cardHeader = card.querySelector(".card-header");
-  const span = card.querySelector(".card-tittle-size-lastname");
+  const cardTittleSize = card.querySelector(".card-tittle-size-lastname");
 
   let contenidoVisible = false;
 
@@ -531,15 +535,16 @@ teamCards.forEach(function (card) {
       flecha.classList.remove("rotate");
       flecha.classList.add("reverse-arrow");
       cardHeader.classList.remove("content-visible");
-      span.style.marginLeft = "0px"; // Reinicia la posición del texto
+      cardTittleSize.classList.add("slide-reverse"); // Agregar clase de animación
+      cardTittleSize.classList.remove("slide-animation"); // Eliminar clase de animación opuesta
       contenidoVisible = false;
     } else {
       contenidoOculto.style.display = "flex";
       flecha.classList.remove("reverse-arrow");
       flecha.classList.add("rotate");
       cardHeader.classList.add("content-visible");
-      span.style.transition = "transform 0.5s ease-in-out";
-      span.style.marginLeft = "250px";
+      cardTittleSize.classList.remove("slide-reverse"); // Eliminar clase de animación opuesta
+      cardTittleSize.classList.add("slide-animation"); // Agregar clase de animación
       contenidoVisible = true;
     }
   });
