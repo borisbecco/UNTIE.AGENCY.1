@@ -258,6 +258,7 @@ document.addEventListener("mouseout", function (event) {
 let slides = document.querySelectorAll(".image-slide");
 let currentSlide = 0;
 let slideInterval = setInterval(nextSlide, 4000);
+let slidesCarousel = document.querySelector(".carousel-container-image-slide");
 
 function nextSlide() {
   slides[currentSlide].style.opacity = 0;
@@ -265,14 +266,29 @@ function nextSlide() {
   slides[currentSlide].style.opacity = 1;
 }
 
-// Agregar un evento "click" al elemento del documento para avanzar al siguiente slide
-document.addEventListener("click", function (event) {
-  // Avanzar al siguiente slide
-  nextSlide();
-  // Reiniciar el intervalo de tiempo
+// Función para cambiar la imagen del slide según la posición del cursor
+function changeSlide(event) {
+  // Obtener la posición horizontal del cursor dentro del contenedor
+  const containerWidth = slidesCarousel.offsetWidth;
+  const cursorX = event.clientX - slidesCarousel.getBoundingClientRect().left;
+
+  // Calcular el índice del slide basado en la posición del cursor
+  const totalSlides = slides.length;
+  const slideIndex = Math.floor((cursorX / containerWidth) * totalSlides);
+
+  // Cambiar al slide correspondiente
+  slides[currentSlide].style.opacity = 0;
+  currentSlide = slideIndex % totalSlides;
+  slides[currentSlide].style.opacity = 1;
+}
+
+// Agregar evento "mousemove" al contenedor del carousel
+slidesCarousel.addEventListener("mousemove", function(event) {
+  changeSlide(event);
   clearInterval(slideInterval);
   slideInterval = setInterval(nextSlide, 4000);
 });
+
 
 //togglebar
 
