@@ -1,41 +1,18 @@
 $(document).ready(function () {
-  // Oculta el contenido principal de la página
-  $("body").hide();
+  // Elimina la línea que oculta el contenido principal de la página
+  // $("body").hide();
 
-  // Muestra la página gradualmente con una animación
-  $("body").fadeIn(50, function () {
-    // Muestra el contenido de a poco después de que la página se haya mostrado completamente
-    $(".navbar")
-      .hide()
-      .each(function (index) {
-        $(this)
-          .delay(300 * index)
-          .fadeIn(500); // 300 es el tiempo de retraso entre cada elemento, 500 es la duración de la animación de cada elemento
-      });
-    $(".textbar")
-      .hide()
-      .each(function (index) {
-        $(this)
-          .delay(300 * index)
-          .fadeIn(500); // 300 es el tiempo de retraso entre cada elemento, 500 es la duración de la animación de cada elemento
-      });
-    $(".main-tittle")
-      .hide()
-      .each(function (index) {
-        $(this)
-          .delay(300 * index)
-          .fadeIn(500); // 300 es el tiempo de retraso entre cada elemento, 500 es la duración de la animación de cada elemento
-      });
-    $(".carousel-container-image-slide")
-      .hide()
-      .each(function (index) {
-        $(this)
-          .delay(300 * index)
-          .fadeIn(600); // 300 es el tiempo de retraso entre cada elemento, 500 es la duración de la animación de cada elemento
-      });
-  });
+  // Elimina la línea que muestra la página gradualmente con una animación
+  // $("body").fadeIn(50, function () {
 
-  // Captura el clic en los enlaces del menú
+  // Elimina las animaciones de fadeIn para los elementos que se muestran gradualmente
+  // $(".navbar").show();
+  // $(".textbar").show();
+  // $(".main-tittle").show();
+  // $(".carousel-container-image-slide").show();
+  
+  // });
+
   // Captura el clic en los enlaces del menú
   $(".nav-menu-b a, .nav-menu-a a").click(function (e) {
     e.preventDefault(); // Evita que se realice la acción predeterminada del enlace
@@ -76,6 +53,27 @@ $(document).ready(function () {
     );
   });
 });
+
+
+// language
+
+
+function redirectToSpanishIndex() {
+  window.location.href = "/ES/index.html";
+}
+
+let languageEs = document.querySelector(".language-es");
+languageEs.addEventListener("click", redirectToSpanishIndex);
+
+
+//EN
+
+function redirectToEnglishIndex() {
+  window.location.href = "../index.html";
+}
+
+let languageEn = document.querySelector(".language-en");
+languageEn.addEventListener("click", redirectToEnglishIndex);
 
 // paralax main - page
 
