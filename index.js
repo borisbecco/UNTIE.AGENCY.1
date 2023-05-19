@@ -366,7 +366,7 @@ function prevImage() {
 }
 
 function nextImage() {
-  showImage(currentIndex + 1);
+  showImage(currentIndex + 1  );
 }
 
 function updateIndicators() {
@@ -423,32 +423,32 @@ changeCarouselContainerBackground();
 
 //talents
 
-function getRandomColor() {
-  const colors = [
-    "deeppink",
-    "mediumvioletred",
-    "plum",
-    "lightgrey",
-    "magenta",
-    "pink",
-    "wheat",
-    "lightblue",
-    "thistle",
-  ];
-  return colors[Math.floor(Math.random() * colors.length)];
-}
+// function getRandomColor() {
+//   const colors = [
+//     "deeppink",
+//     "mediumvioletred",
+//     "plum",
+//     "lightgrey",
+//     "magenta",
+//     "pink",
+//     "wheat",
+//     "lightblue",
+//     "thistle",
+//   ];
+//   return colors[Math.floor(Math.random() * colors.length)];
+// }
 
-const mobileScreen = window.matchMedia("(max-width: 576px)");
-const h3 = document.querySelectorAll("h3");
-function applyBackgroundColor() {
-  if (mobileScreen.matches) {
-    h3.forEach((h3) => {
-      h3.style.backgroundColor = getRandomColor();
-    });
-  }
-}
+// const mobileScreen = window.matchMedia("(max-width: 576px)");
+// const h3 = document.querySelectorAll("h3");
+// function applyBackgroundColor() {
+//   if (mobileScreen.matches) {
+//     h3.forEach((h3) => {
+//       h3.style.backgroundColor = getRandomColor();
+//     });
+//   }
+// }
 
-applyBackgroundColor();
+// applyBackgroundColor();
 
 function toggleCard() {
   var cards = document.querySelectorAll(".card");
