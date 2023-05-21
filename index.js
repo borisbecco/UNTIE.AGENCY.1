@@ -10,7 +10,7 @@ $(document).ready(function () {
   // $(".textbar").show();
   // $(".main-tittle").show();
   // $(".carousel-container-image-slide").show();
-  
+
   // });
 
   // Captura el clic en los enlaces del menú
@@ -54,9 +54,7 @@ $(document).ready(function () {
   });
 });
 
-
 // language
-
 
 function redirectToSpanishIndex() {
   window.location.href = "/ES/index.html";
@@ -64,7 +62,6 @@ function redirectToSpanishIndex() {
 
 let languageEs = document.querySelector(".language-es");
 languageEs.addEventListener("click", redirectToSpanishIndex);
-
 
 //EN
 
@@ -93,104 +90,104 @@ window.addEventListener("scroll", function () {
 
 // paralax wwd - page
 
-const container1 = document.querySelector(".container-1");
-const container1Parallax = document.querySelector(".container-1-parallax");
-const container1OffsetTop = container1.offsetTop;
-const container1Height = container1.offsetHeight;
+// const container1 = document.querySelector(".container-1");
+// const container1Parallax = document.querySelector(".container-1-parallax");
+// const container1OffsetTop = container1.offsetTop;
+// const container1Height = container1.offsetHeight;
 
-window.addEventListener("scroll", function () {
-  // Verificar si la parte inferior del selector es visible en la pantalla
-  if (
-    window.pageYOffset + window.innerHeight >
-    container1OffsetTop + container1Height
-  ) {
-    const speed = container1Parallax.getAttribute("data-speed");
-    const y = ((window.pageYOffset - container1OffsetTop) * speed) / 80;
-    container1Parallax.style.transform = `translate3d(0, ${y}px, 0)`;
-  }
-});
+// window.addEventListener("scroll", function () {
+//   // Verificar si la parte inferior del selector es visible en la pantalla
+//   if (
+//     window.pageYOffset + window.innerHeight >
+//     container1OffsetTop + container1Height
+//   ) {
+//     const speed = container1Parallax.getAttribute("data-speed");
+//     const y = ((window.pageYOffset - container1OffsetTop) * speed) / 80;
+//     container1Parallax.style.transform = `translate3d(0, ${y}px, 0)`;
+//   }
+// });
 
-const container2 = document.querySelector(".container-2");
-const container2Parallax = document.querySelector(".container-2-parallax");
-const container2OffsetTop = container2.offsetTop;
-const container2Height = container2.offsetHeight;
+// const container2 = document.querySelector(".container-2");
+// const container2Parallax = document.querySelector(".container-2-parallax");
+// const container2OffsetTop = container2.offsetTop;
+// const container2Height = container2.offsetHeight;
 
-window.addEventListener("scroll", function () {
-  // Verificar si la parte inferior del selector es visible en la pantalla
-  if (
-    window.pageYOffset + window.innerHeight >
-    container2OffsetTop + container2Height
-  ) {
-    const speed = container2Parallax.getAttribute("data-speed");
-    const y = ((window.pageYOffset - container2OffsetTop) * speed) / 80;
-    container2Parallax.style.transform = `translate3d(0, ${y}px, 0)`;
-  }
-});
+// window.addEventListener("scroll", function () {
+//   // Verificar si la parte inferior del selector es visible en la pantalla
+//   if (
+//     window.pageYOffset + window.innerHeight >
+//     container2OffsetTop + container2Height
+//   ) {
+//     const speed = container2Parallax.getAttribute("data-speed");
+//     const y = ((window.pageYOffset - container2OffsetTop) * speed) / 80;
+//     container2Parallax.style.transform = `translate3d(0, ${y}px, 0)`;
+//   }
+// });
 
-const container3 = document.querySelector(".container-3");
-const container3Parallax = document.querySelector(".container-3-parallax");
-const container3OffsetTop = container3.offsetTop;
-const container3Height = container3.offsetHeight;
+// const container3 = document.querySelector(".container-3");
+// const container3Parallax = document.querySelector(".container-3-parallax");
+// const container3OffsetTop = container3.offsetTop;
+// const container3Height = container3.offsetHeight;
 
-window.addEventListener("scroll", function () {
-  // Verificar si la parte inferior del selector es visible en la pantalla
-  if (
-    window.pageYOffset + window.innerHeight >
-    container3OffsetTop + container3Height
-  ) {
-    const speed = container3Parallax.getAttribute("data-speed");
-    const y = ((window.pageYOffset - container3OffsetTop) * speed) / 80;
-    container3Parallax.style.transform = `translate3d(0, ${y}px, 0)`;
-  }
-});
-const container4 = document.querySelector(".container-4");
-const container4Parallax = document.querySelector(".container-4-parallax");
-const container4OffsetTop = container4.offsetTop;
-const container4Height = container4.offsetHeight;
+// window.addEventListener("scroll", function () {
+//   // Verificar si la parte inferior del selector es visible en la pantalla
+//   if (
+//     window.pageYOffset + window.innerHeight >
+//     container3OffsetTop + container3Height
+//   ) {
+//     const speed = container3Parallax.getAttribute("data-speed");
+//     const y = ((window.pageYOffset - container3OffsetTop) * speed) / 80;
+//     container3Parallax.style.transform = `translate3d(0, ${y}px, 0)`;
+//   }
+// });
+// const container4 = document.querySelector(".container-4");
+// const container4Parallax = document.querySelector(".container-4-parallax");
+// const container4OffsetTop = container4.offsetTop;
+// const container4Height = container4.offsetHeight;
 
-window.addEventListener("scroll", function () {
-  // Verificar si la parte inferior del selector es visible en la pantalla
-  if (
-    window.pageYOffset + window.innerHeight >
-    container4OffsetTop + container4Height
-  ) {
-    const speed = container4Parallax.getAttribute("data-speed");
-    const y = ((window.pageYOffset - container4OffsetTop) * speed) / 80;
-    container4Parallax.style.transform = `translate3d(0, ${y}px, 0)`;
-  }
-});
-const container5 = document.querySelector(".container-5");
-const container5Parallax = document.querySelector(".container-5-parallax");
-const container5OffsetTop = container5.offsetTop;
-const container5Height = container5.offsetHeight;
+// window.addEventListener("scroll", function () {
+//   // Verificar si la parte inferior del selector es visible en la pantalla
+//   if (
+//     window.pageYOffset + window.innerHeight >
+//     container4OffsetTop + container4Height
+//   ) {
+//     const speed = container4Parallax.getAttribute("data-speed");
+//     const y = ((window.pageYOffset - container4OffsetTop) * speed) / 80;
+//     container4Parallax.style.transform = `translate3d(0, ${y}px, 0)`;
+//   }
+// });
+// const container5 = document.querySelector(".container-5");
+// const container5Parallax = document.querySelector(".container-5-parallax");
+// const container5OffsetTop = container5.offsetTop;
+// const container5Height = container5.offsetHeight;
 
-window.addEventListener("scroll", function () {
-  // Verificar si la parte inferior del selector es visible en la pantalla
-  if (
-    window.pageYOffset + window.innerHeight >
-    container5OffsetTop + container5Height
-  ) {
-    const speed = container5Parallax.getAttribute("data-speed");
-    const y = ((window.pageYOffset - container5OffsetTop) * speed) / 80;
-    container5Parallax.style.transform = `translate3d(0, ${y}px, 0)`;
-  }
-});
-const container6 = document.querySelector(".container-6");
-const container6Parallax = document.querySelector(".container-6-parallax");
-const container6OffsetTop = container6.offsetTop;
-const container6Height = container6.offsetHeight;
+// window.addEventListener("scroll", function () {
+//   // Verificar si la parte inferior del selector es visible en la pantalla
+//   if (
+//     window.pageYOffset + window.innerHeight >
+//     container5OffsetTop + container5Height
+//   ) {
+//     const speed = container5Parallax.getAttribute("data-speed");
+//     const y = ((window.pageYOffset - container5OffsetTop) * speed) / 80;
+//     container5Parallax.style.transform = `translate3d(0, ${y}px, 0)`;
+//   }
+// });
+// const container6 = document.querySelector(".container-6");
+// const container6Parallax = document.querySelector(".container-6-parallax");
+// const container6OffsetTop = container6.offsetTop;
+// const container6Height = container6.offsetHeight;
 
-window.addEventListener("scroll", function () {
-  // Verificar si la parte inferior del selector es visible en la pantalla
-  if (
-    window.pageYOffset + window.innerHeight >
-    container6OffsetTop + container6Height
-  ) {
-    const speed = container6Parallax.getAttribute("data-speed");
-    const y = ((window.pageYOffset - container6OffsetTop) * speed) / 80;
-    container6Parallax.style.transform = `translate3d(0, ${y}px, 0)`;
-  }
-});
+// window.addEventListener("scroll", function () {
+//   // Verificar si la parte inferior del selector es visible en la pantalla
+//   if (
+//     window.pageYOffset + window.innerHeight >
+//     container6OffsetTop + container6Height
+//   ) {
+//     const speed = container6Parallax.getAttribute("data-speed");
+//     const y = ((window.pageYOffset - container6OffsetTop) * speed) / 80;
+//     container6Parallax.style.transform = `translate3d(0, ${y}px, 0)`;
+//   }
+// });
 
 // custom-mouse
 
@@ -205,8 +202,39 @@ document.addEventListener("mousemove", function (event) {
     customMouse.style.height = "15px";
   } else {
     // Restablecer el tamaño del cursor cuando el overlay está cerrado
-    customMouse.style.width = "25px";
-    customMouse.style.height = "25px";
+    customMouse.style.width = "20px";
+    customMouse.style.height = "20px";
+  }
+
+  var thirdSection = document.getElementById("third-section");
+  var thirdSectionRect = thirdSection.getBoundingClientRect();
+  var thirdSectionTop = thirdSectionRect.top;
+  var thirdSectionBottom = thirdSectionRect.bottom;
+  var thirdSectionLeft = thirdSectionRect.left;
+  var thirdSectionRight = thirdSectionRect.right;
+
+  if (overlay.style.display === "block") {
+    // Estilos del cursor cuando el overlay está abierto
+    customMouse.style.width = "15px";
+    customMouse.style.height = "15px";
+    customMouse.style.mixBlendMode = "exclusion";
+  } else if (
+    event.clientY >= thirdSectionTop &&
+    event.clientY <= thirdSectionBottom &&
+    event.clientX >= thirdSectionLeft &&
+    event.clientX <= thirdSectionRight
+  ) {
+    // Estilos del cursor cuando está dentro de la sección "thirdSection"
+    customMouse.style.width = "15px";
+    customMouse.style.height = "15px";
+    customMouse.style.backgroundColor = "red";
+    customMouse.style.mixBlendMode = "normal";
+  } else {
+    // Estilos del cursor por defecto cuando está fuera de la sección "thirdSection"
+    customMouse.style.width = "20px";
+    customMouse.style.height = "20px";
+    customMouse.style.backgroundColor = "";
+    customMouse.style.mixBlendMode = "";
   }
 
   // Actualizar la posición del cursor
@@ -281,12 +309,11 @@ function changeSlide(event) {
 }
 
 // Agregar evento "mousemove" al contenedor del carousel
-slidesCarousel.addEventListener("mousemove", function(event) {
+slidesCarousel.addEventListener("mousemove", function (event) {
   changeSlide(event);
   clearInterval(slideInterval);
   slideInterval = setInterval(nextSlide, 4000);
 });
-
 
 //togglebar
 
@@ -366,7 +393,7 @@ function prevImage() {
 }
 
 function nextImage() {
-  showImage(currentIndex + 1  );
+  showImage(currentIndex + 1);
 }
 
 function updateIndicators() {
@@ -382,9 +409,21 @@ function updateIndicators() {
   });
 }
 
+// function changeCarouselContainerBackground() {
+//   var colors = ["#a42f33", "#262626", "#214733", "#912a5b"];
+//   carouselContainer.style.backgroundColor = colors[currentIndex];
+// }
+
 function changeCarouselContainerBackground() {
   var colors = ["#a42f33", "#262626", "#214733", "#912a5b"];
-  carouselContainer.style.backgroundColor = colors[currentIndex];
+  var startIndex = currentIndex % colors.length;
+  var endIndex = (currentIndex + 1) % colors.length;
+  var startColor = colors[startIndex];
+  var endColor = colors[endIndex];
+  var gradient =
+    "linear-gradient(to right, " + startColor + ", " + endColor + ")";
+
+  carouselContainer.style.background = gradient;
 }
 
 carousel.addEventListener("click", function (event) {
@@ -529,6 +568,27 @@ overlay.addEventListener("click", function (e) {
 document.getElementById("toggleButton").addEventListener("click", function () {
   toggleOverlay();
 });
+
+// talent
+
+const searchInput = document.getElementById("search-input");
+searchInput.addEventListener("input", function () {
+  const letter = this.value.trim().toUpperCase();
+  filterCardsByLetter(letter);
+});
+
+function filterCardsByLetter(letter) {
+  const cards = document.getElementsByClassName("card");
+  for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+    const cardLetter = card.getAttribute("data-letter");
+    if (cardLetter === letter || letter === "") {
+      card.style.display = "block"; // Muestra la tarjeta
+    } else {
+      card.style.display = "none"; // Oculta la tarjeta
+    }
+  }
+}
 
 // team
 
