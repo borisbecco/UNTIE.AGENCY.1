@@ -315,8 +315,11 @@ nav:hover {
   color: #1d1d1b;
   border: none;
   font-family: "plaak-bold";
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  margin-bottom: -2px;
+  padding-right: 40px;
 }
 
 .hamburger-button-color-change {
@@ -328,17 +331,21 @@ nav:hover {
   transform: rotateY(180deg);
   transform: rotateX(180deg);
   display: inline-block;
-  margin-left: 40px;
-  font-size: 20px;
+  margin-left: 42px;
+  font-size: 16px;
+  padding-top: 1.3px;
 }
 
 .hamburger-button-agency {
   transform: scaleX(-1) scaleY(-1);
   display: inline-block;
+  font-size: 12px;
+  display: flex;
 }
 
 .newPosition {
   display: inline-block;
+  margin-right: 1px;
 }
 
 .newPosition .hamburger-button-triangle {
@@ -361,6 +368,7 @@ nav:hover {
   font-family: "plaak-bold";
   margin-top: 12px;
   margin-left: 1px;
+  font-size: 12px;
 }
 
 .language-button a {
@@ -383,7 +391,7 @@ nav:hover {
 }
 
 .language-button-container-change {
-  margin-right: 44px;
+  margin-right: 53.6px;
 }
 
 .active-language {
@@ -460,29 +468,40 @@ nav:hover {
   font-size: 18px;
   letter-spacing: -0.4px;
   margin-top: -12px;
-  opacity: 0;
-  animation: fade-in 1.2s forwards;
+  opacity: 1;
+  animation: fade-in-now 1s forwards;
 }
 
 .nav-menu-a:nth-child(1) {
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
 }
 
 .nav-menu-a:nth-child(2) {
-  animation-delay: 0.4s;
+  animation-delay: 0.15s;
 }
 
 .nav-menu-a:nth-child(3) {
-  animation-delay: 0.6s;
+  animation-delay: 0.2s;
 }
 .nav-menu-a:nth-child(4) {
-  animation-delay: 0.8s;
+  animation-delay: 0.25s;
 }
 .nav-menu-a:nth-child(5) {
-  animation-delay: 1s;
+  animation-delay: 0.3s;
 }
 .nav-menu-a:nth-child(6) {
-  animation-delay: 1.2s;
+  animation-delay: 0.35s;
+}
+
+@keyframes fade-in-now {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nav-menu ul li a:hover {
@@ -496,25 +515,26 @@ nav:hover {
 #submenu {
   display: none;
   opacity: 0;
-  animation: fade-in 1.5s forwards;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    display: block;
-  }
-  100% {
-    opacity: 1;
-    display: block;
-  }
 }
 
 #what-we-do:hover #submenu {
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin-top: 20px;
   margin-bottom: -25px;
   opacity: 1;
+  animation: reveal-submenu 0.1s ease-in;
+}
+
+@keyframes reveal-submenu {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: -15px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -573,11 +593,13 @@ nav:hover {
 
 .textbar-text {
   color: #f4f3f3;
-  font-size: 10px;
+  font-size: 10.07px;
   padding-bottom: 0.3px;
   font-style: bold;
   white-space: nowrap;
-  animation: scroll-left 15s linear infinite;
+  animation: scroll-left 65s linear infinite;
+  text-align: center;
+  margin-top: 1px;
 }
 
 @media screen and (max-width: 576px) {
@@ -652,16 +674,42 @@ nav:hover {
   width: auto;
   background-color: #a42f33;
   position: relative;
+  /* overflow: hidden; */
 }
 
 .carousel-container {
-  background-color: #000;
+  /* background: linear-gradient(#a42f33, #262626);
+  animation: gradientTransition 1s infinite; */
+  background-color: #a42f33;
   height: 140vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  transition: background-color 1s ease;
 }
+
+/* @keyframes backgroundTransition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
+
+/* @keyframes gradientTransition {
+  0% {
+    background: linear-gradient(#a42f33, #262626);
+  }
+  50% {
+    background: linear-gradient(#262626, #214733);
+  }
+  100% {
+    background: linear-gradient(#214733, #912a5b);
+  }
+} */
 
 .carousel {
   width: 50%;
@@ -1098,16 +1146,15 @@ nav:hover {
 .overlay1 {
   position: absolute;
   top: 10px;
-  left: 25%;
+  left: 19.1%;
   text-align: center;
   z-index: 1;
 }
 
 .overlay1 p {
   color: rgb(26, 26, 26);
-  font-size: 90px !important;
+  font-size: 110px !important;
   font-weight: 205;
-  margin: 0;
 }
 
 .no-scroll {
@@ -1116,24 +1163,27 @@ nav:hover {
 .container-1 img {
   width: 50%;
   float: right;
-  margin-top: -550px;
+  margin-top: -900px;
   object-fit: contain;
   position: absolute;
-  margin-left: 59.7%;
+  margin-left: 51.1%;
 }
 
 .container-1 p {
   margin-left: 40px;
   margin-top: 25px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .container-1-parallax {
   font-family: "plaak-regular";
+  line-height: 1.4;
+  padding-left: 20px;
+  padding-top: 15px;
 }
 
 .wwd-bold {
-  font-weight: bold;
+  font-family: "plaak-bold";
 }
 
 #last {
@@ -1147,7 +1197,7 @@ nav:hover {
   font-weight: 205;
   text-align: center;
   margin-right: 80px;
-  margin-top: 70px;
+  margin-top: 200px;
 }
 
 .arrow {
@@ -1156,7 +1206,7 @@ nav:hover {
   font-size: 55px;
   font-weight: 205;
   text-align: center;
-  margin: 0;
+  margin-bottom: 50px;
   cursor: none;
   transition: all 0.2s ease-in-out;
 }
@@ -1184,82 +1234,98 @@ nav:hover {
 .container2 p {
   margin-left: 40px;
   margin-top: 25px;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 205;
 }
 
 .container-2-parallax {
   font-family: "plaak-regular";
+  line-height: 1.4;
+  padding-left: 20px;
+  padding-top: 15px;
 }
 
 #img-complete {
   width: 50%;
   float: right;
-  margin-top: -550px;
+  margin-top: -900px;
   object-fit: contain;
   position: absolute;
-  margin-left: 59.8%;
+  margin-left: 51.1%;
 }
 
 .overlay2 {
   position: absolute;
   top: 10px;
-  left: 38%;
+  left: 37%;
   text-align: center;
   z-index: 1;
 }
 
 .overlay2 p {
   color: rgb(26, 26, 26);
-  font-size: 90px !important;
-  margin-left: 37px;
+  font-size: 110px !important;
   font-weight: 205;
-  /* margin: 0; */
+  margin: 0;
 }
 #middle-text {
-  margin-left: 20%;
+  margin-left: 17%;
   margin-top: 100px;
 }
 
 #middle2-text {
-  margin-left: 80px;
+  margin-left: 120px;
+}
+
+.container-3-parallax {
+  font-family: "plaak-regular";
+  line-height: 1.4;
+  padding-left: 20px;
+  padding-top: 15px;
 }
 
 #lapiz {
   width: 50%;
   float: right;
-  margin-top: -550px;
-  object-fit: cover;
+  margin-top: -900px;
+  object-fit: contain;
   position: absolute;
-  margin-left: 50%;
+  margin-left: 51.1%;
+}
+
+.container-4-parallax {
+  font-family: "plaak-regular";
+  line-height: 1.4;
+  padding-left: 20px;
+  padding-top: 15px;
 }
 
 #ZAPATOS {
   width: 50%;
   float: right;
-  margin-top: -550px;
-  object-fit: cover;
+  margin-top: -900px;
+  object-fit: contain;
   position: absolute;
-  margin-left: 50%;
+  margin-left: 51.1%;
 }
 
 .overlay3 {
   position: absolute;
   top: 10px;
-  left: 40%;
+  left: 41.2%;
   text-align: center;
   z-index: 1;
 }
 
 .overlay3 p {
   color: rgb(26, 26, 26);
-  font-size: 54px;
+  font-size: 110px;
   font-weight: 205;
   margin: 0;
 }
 
 #middle3-text {
-  margin-left: 110px;
+  margin-left: 150px;
 }
 
 #middle4-text {
@@ -1269,42 +1335,68 @@ nav:hover {
 #anteojo {
   max-width: 50% !important;
   float: right;
-  margin-top: -550px;
-  object-fit: cover;
+  margin-top: -900px;
+  object-fit: contain;
   position: absolute;
-  margin-left: 50%;
+  margin-left: 51.1%;
+}
+
+.container-5-parallax {
+  font-family: "plaak-regular";
+  line-height: 1.4;
+  padding-left: 20px;
+  padding-top: 15px;
 }
 
 .overlay4 {
   position: absolute;
   top: 10px;
-  left: 23%;
+  left: 18.7%;
   text-align: center;
   z-index: 1;
 }
 
 .overlay4 p {
   color: rgb(26, 26, 26);
-  font-size: 54px;
+  font-size: 110px;
   font-weight: 205;
   margin: 0;
 }
 
 #middle5-text {
-  margin-left: 300px;
+  margin-left: 550px;
+}
+
+#middle6-text {
+  margin-left: 90px;
+}
+
+#velas {
+  max-width: 50% !important;
+  float: right;
+  margin-top: -900px;
+  object-fit: contain;
+  position: absolute;
+  margin-left: 51.1%;
+}
+.container-6-parallax {
+  font-family: "plaak-regular";
+  line-height: 1.4;
+  padding-left: 20px;
+  padding-top: 15px;
 }
 
 .overlay5 {
   position: absolute;
   top: 10px;
-  left: 28%;
+  left: 25%;
   text-align: center;
   z-index: 1;
 }
 
 .overlay5 p {
   color: rgb(26, 26, 26);
-  font-size: 54px;
+  font-size: 110px;
   font-weight: 205;
   margin: 0;
 }

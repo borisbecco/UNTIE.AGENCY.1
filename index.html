@@ -141,7 +141,7 @@
               <div class="toggle-button-container">
                 <button class="hamburger-button" id="toggleButton">
                   <span class="hamburger-button-triangle clickable"> ▼</span>
-                  <br />
+                  <!-- <br /> -->
                   <span class="hamburger-button-agency clickable">AGENCY </span>
                 </button>
               </div>
@@ -241,7 +241,7 @@
 
     <div class="second-section" id="second-section">
       <div class="carousel-container">
-        <div class="carousel">
+        <div class="carousel" data-speed="40">
           <img
             data-src="ABOUTPHOTOS/About01 1379x881px .png"
             class="lazy-load"
@@ -251,22 +251,28 @@
             class="lazy-load"
           />
           <img src="ABOUTPHOTOS/About03 1379x881px.png" />
-          <img src="ABOUTPHOTOS/About04 1379x881px.png" />
+          <img src="ABOUTPHOTOS/About04 1379x881px.png " />
           <div class="prev clickable" onclick="prevImage()">&#10094;</div>
           <div class="next clickable" onclick="nextImage()">&#10095;</div>
           <div class="indicators clickable"></div>
         </div>
       </div>
     </div>
-    <div class="space-section"></div>
-    <!-- talents -->
     <div id="third-section">
+      <div class="space-section"></div>
+      <!-- talents -->
+
       <div class="talent-section">
-        
         <div id="talents">
           <h1 class="talent">TALENTS</h1>
         </div>
-        <div class="talents-search"><input type="text" id="search-input" placeholder="Buscar por letra"></div>
+        <div class="talents-search">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="To search by letter"
+          />
+        </div>
         <div class="row" id="card-row">
           <div class="column">
             <div class="card card1" data-letter="A">
@@ -795,7 +801,7 @@
         </div>
         <div class="container-1-parallax" data-speed="50">
           <p class="wwd-bold">01</p>
-          <br /><br /><br />
+          <br /><br />
           <p>WHAT WE DO</p>
           <br /><br /><br /><br />
 
@@ -814,19 +820,19 @@
             CONTENT CREATORS, CELEBRITIES.
           </p>
           <br /><br /><br />
-          <br /><br /><br /><br /><br /><br /><br /><br />
+          <br /><br /><br /><br /><br /><br /><br />
           <p id="last">
             WE HAVE NO LIMITS<br />
             WHEN IT COMES TO COMMUNICATING IDEAS<br />
             WE HAVE NO LIMITS<br />
             WHEN IT COMES TO SPREADING THE WORD
           </p>
+          <img
+            class="lazy-load"
+            data-src="WHATWEDO/image-1.jpg"
+            alt="Placeholder Image"
+          />
         </div>
-        <img
-          class="lazy-load thumbnail"
-          data-src="WHATWEDO/image-1.jpg"
-          alt="Placeholder Image"
-        />
       </div>
 
       <!--#####################---SECTION 1---##########################################--->
@@ -847,22 +853,23 @@
         </div>
         <div class="container-2-parallax" data-speed="50">
           <p class="wwd-bold">02</p>
-          <p>WHAT WE DO</p>
           <br />
+          <p>WHAT WE DO</p>
+          <br /><br /><br /><br /><br />
 
           <p>
             UNTIE CREATES STRATEGIES THAT LOOK TO THE<br />
-            FUTURE AND BEYOND
+            FUTURE AND BEYOND. .
           </p>
-
+          <br /><br /><br /><br /><br />
           <p id="middle-text">WE BREAK</p>
-          <br /><br /><br />
+          <br /><br /><br /><br /><br /><br /><br /><br /><br />
           <p>
             UNCERTAINTY AND MAKE PLANS THAT CONTEMPLATE<br />
             THE LONG AND SHORT TERM.
           </p>
           <img
-            class="lazy-load thumbnail"
+            class="lazy-load"
             id="img-complete"
             data-src="WHATWEDO/image2.jpg"
             alt="Placeholder Image"
@@ -886,15 +893,17 @@
         </div>
         <div class="container-3-parallax" data-speed="50">
           <p class="wwd-bold">03</p>
+          <br />
           <p>WHAT WE DO</p>
           <br />
-          <span class="white-point"></span>
+
+          <br /><br /><br /><br /><br />
           <p id="middle2-text">
-            WE ARE HERE TO PROVIDE BRANDS WITH THE TOOLS<br />
-            TO ENHANCE THEIR IDENTITY.<br />
+            WE ARE HERE TO PROVIDE BRANDS WITH THE TOOLS TO ENHANCE<br />
+            THEIR IDENTITY.<br />
             OUR SPECTRUM OF SERVICES GOES FROM BRAND POSITIONING.
           </p>
-          <br /><br /><br />
+          <br /><br /><br /><br /><br /><br />
 
           <p id="middle2-text">
             AND SALE STRATEGIES TO ADVERTISING<br />
@@ -902,11 +911,11 @@
             EVERYTHING WE DO IT’S WITH THE INTENTION
           </p>
           <p id="middle2-text">
-            OF ACHIEVING AN AUTHENTIC BRAND IMAGE THAT PLEASES OUR <br />CLIENT
+            OF ACHIEVING AN AUTHENTIC BRAND IMAGE THAT PLEASES OUR <br />CLIENT.
           </p>
 
           <img
-            class="lazy-load thumbnail"
+            class="lazy-load"
             id="lapiz"
             data-src="WHATWEDO/image-2.jpg"
             alt="Placeholder Image"
@@ -917,7 +926,7 @@
 
       <!--#####################---SECTION 4---##########################################--->
 
-      <div class="container2 thumbnail container-4" id="digital">
+      <div class="container2 container-4" id="digital">
         <div class="overlay3">
           <p>DIGITAL</p>
           <div class="arrows">
@@ -931,28 +940,27 @@
         </div>
         <div class="container-4-parallax" data-speed="50">
           <p class="wwd-bold">04</p>
-          <br /><br /><br />
+          <br />
           <p>WHAT WE DO</p>
-          <br /><br />
-          <span class="white-point"></span>
+          <br /><br /><br /><br /><br /><br />
           <p id="middle2-text">
             GLOBAL IS LOCAL, LOCAL IS GLOBAL<br />
             AT UNTIE WE DON'T DISSOCIATE LOCATIONS,<br />
             WE WORK WITH OUR EYES SET ON A WORLD IN COMMON.<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </p>
-          <br />
+          <br /><br />
 
           <p id="middle3-text">
             That’s why global campaigns <br />
             are a central area of<br />
             our doing as an agency.
           </p>
-          <br /><br /><br /><br />
+          <br /><br /><br /><br /><br /><br />
           <p id="middle4-text">UT WISI ENIM AD MINIM VENIAM</p>
 
           <img
-            class="lazy-load thumbnail"
+            class="lazy-load"
             id="ZAPATOS"
             data-src="WHATWEDO/image3.jpg"
             alt="Placeholder Image"
@@ -962,7 +970,7 @@
       <!--#####################---SECTION 4---##########################################--->
       <!--#####################---SECTION 5---##########################################--->
 
-      <div class="container2 thumbnail container-5" id="content-production">
+      <div class="container2 container-5" id="content-production">
         <div class="overlay4">
           <p>CONTENT PRODUCTION</p>
           <div class="arrows">
@@ -976,28 +984,31 @@
         </div>
         <div class="container-5-parallax" data-speed="50">
           <p class="wwd-bold">05</p>
-          <p>WHAT WE DO</p>
-          <br /><br />
-          <span class="white-point"></span>
+          <br />
+          <p>
+            WHAT WE DO
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          </p>
+
           <p id="middle2-text">
             When it comes to creativity, <br />
             UNTIE it’s here to assist brands.<br />
-            In order to achieve their full potential,<br />
-            we help brands find the best ideas<br />
-            that will elevate their uniqueness<br />
-            to the next level.<br />
+            In order to achieve their full <br />
+            potential, we help brands find <br />
+            the best ideas that will elevate <br />
+            their uniqueness to the next level.<br />
           </p>
-          <br />
+          <br /><br /><br />
 
           <p>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LAOREET
             DOLORE
           </p>
-          <br /><br />
+          <br /><br /><br /><br /><br /><br /><br /><br /><br />
           <p id="middle5-text">LOREM IPSUM DOLOR <br />SIT.</p>
 
           <img
-            class="lazy-load thumbnail"
+            class="lazy-load"
             id="anteojo"
             data-src="WHATWEDO/image-3.jpg"
             alt="Placeholder Image"
@@ -1022,20 +1033,20 @@
         </div>
         <div class="container-6-parallax" data-speed="50">
           <p class="wwd-bold">06</p>
+          <br>
           <p>WHAT WE DO</p>
-          <br /><br />
-          <span class="white-point"></span>
-          <p>
+          <br /><br /><br /><br />
+          <p id="middle6-text">
             AS A WAY OF OPTIMIZING THE RELATIONS BETWEEN<br />
             BRANDS AND THEIR PUBLIC,
           </p>
 
-          <p>
+          <p id="middle6-text">
             WE PROVIDE ORGANIZATIONS WITH<br />
             PR SERVICES THAT WILL CREATE EVERLASTING TIES.
           </p>
-          <br /><br /><br /><br />
-          <p>
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          <p id="middle6-text">
             WE KNOW<br />
             THAT PEOPLE ARE WHAT MAKES A BRAND VALUABLE,<br />
             SO WE WORK TOWARDS MAKING THAT SPECIAL<br />
@@ -1043,8 +1054,8 @@
           </p>
 
           <img
-            class="lazy-load thumbnail"
-            id="anteojo"
+            class="lazy-load"
+            id="velas"
             data-src="WHATWEDO/image6.jpg"
             alt="Placeholder Image"
           />
